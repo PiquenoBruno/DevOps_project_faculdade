@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: estoque-deployment
+  name: pagamentos-deployment
 
 spec:
   replicas: 2
@@ -12,18 +12,18 @@ spec:
 
   selector:
     matchLabels:
-      app: estoque
+      app: pagamentos
 
   template:
     metadata:
       labels:
-        app: estoque
+        app: pagamentos
 
     spec:
       containers:
-        - name: estoque
+        - name: pagamentos
 
-          image: brunofirmino/estoque:v1.0.0
+          image: brunofirmino/pagamentos:v1.0.0
 
           ports:
             - containerPort: 3000

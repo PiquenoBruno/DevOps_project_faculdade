@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: estoque-deployment
+  name: api-gateway-deployment
 
 spec:
   replicas: 2
@@ -12,18 +12,18 @@ spec:
 
   selector:
     matchLabels:
-      app: estoque
+      app: api-gateway
 
   template:
     metadata:
       labels:
-        app: estoque
+        app: api-gateway
 
     spec:
       containers:
-        - name: estoque
+        - name: api-gateway
 
-          image: brunofirmino/estoque:v1.0.0
+          image: brunofirmino/api-gateway:v1.0.0
 
           ports:
             - containerPort: 3000
@@ -50,3 +50,4 @@ spec:
 
             - secretRef:
                 name: app-secret
+                

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: estoque-deployment
+  name: pedidos-deployment
 
 spec:
   replicas: 2
@@ -12,18 +12,18 @@ spec:
 
   selector:
     matchLabels:
-      app: estoque
+      app: pedidos
 
   template:
     metadata:
       labels:
-        app: estoque
+        app: pedidos
 
     spec:
       containers:
-        - name: estoque
+        - name: pedidos
 
-          image: brunofirmino/estoque:v1.0.0
+          image: brunofirmino/pedidos:v1.0.0
 
           ports:
             - containerPort: 3000
