@@ -37,7 +37,7 @@ Prometheus + Grafana
 ```
 
 ---
-
+```bash
 pedidos-veloz/
 │
 ├── .github/
@@ -101,6 +101,7 @@ pedidos-veloz/
 ├── .gitignore
 ├── docker-compose.yml
 └── README.md
+```
 
 # 🧩 Microsserviços
 
